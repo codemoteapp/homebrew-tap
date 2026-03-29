@@ -1,20 +1,20 @@
 class Codemote < Formula
   desc "Control AI coding assistants from your iPhone"
   homepage "https://github.com/codemoteapp"
-  version "1.3.8"
+  version "1.3.9"
   license :cannot_represent
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/codemoteapp/codemote-/releases/download/v1.3.8/codemote-1.3.8-macos-arm64.tar.gz"
-      sha256 "cca7f2efaaeab9887d4bd09dc843d502abd87263db7b87ffea516f46077090c8"
+      url "https://github.com/codemoteapp/codemote-/releases/download/v1.3.9/codemote-1.3.9-macos-arm64.tar.gz"
+      sha256 "22a9d30ada71f0cac89276ba316ab053da61522d93fa787c281ed73afd64a7d1"
 
       def install
         bin.install "codemote-arm64" => "codemote"
       end
     else
-      url "https://github.com/codemoteapp/codemote-/releases/download/v1.3.8/codemote-1.3.8-macos-x64.tar.gz"
-      sha256 "3e5ff9c73a90ad69d23344ffa18aef4f266caf335af5b51e84b0ceffc1cd79c0"
+      url "https://github.com/codemoteapp/codemote-/releases/download/v1.3.9/codemote-1.3.9-macos-x64.tar.gz"
+      sha256 "9f04d7e13135a38bebf916ca10f279d365d2932b69f5d57da093b0d1567c62b5"
 
       def install
         bin.install "codemote-x64" => "codemote"
@@ -23,6 +23,6 @@ class Codemote < Formula
   end
 
   test do
-    assert_match "codemote", shell_output("#{bin}/codemote --version 2>&1", 1)
+    assert_match "1.3", shell_output("#{bin}/codemote --version 2>&1")
   end
 end
