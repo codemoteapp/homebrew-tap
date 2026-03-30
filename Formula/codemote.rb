@@ -1,13 +1,13 @@
 class Codemote < Formula
   desc "Control AI coding assistants from your iPhone"
   homepage "https://github.com/codemoteapp"
-  version "1.4.0"
+  version "1.4.1"
   license :cannot_represent
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/codemoteapp/codemote-/releases/download/v1.4.0/codemote-1.4.0-macos-arm64.tar.gz"
-      sha256 "3518fe580d4a3899848052ce919cc3ba8563fe67d1c620e17daf2a48612873d7"
+      url "https://github.com/codemoteapp/codemote-/releases/download/v1.4.1/codemote-1.4.1-macos-arm64.tar.gz"
+      sha256 "8d7f5be37fe609bf9abf8edec7c754f9a11177dd573da00c5d4be2f7d1a95f2c"
 
       def install
         bin.install "codemote-arm64" => "codemote"
